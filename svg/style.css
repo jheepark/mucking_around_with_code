@@ -1,0 +1,35 @@
+.flowerPetals > path {
+	animation: flower-petal-animation 4s steps(36) infinite;
+	stroke: black;
+	stroke-width: 2px;
+}
+
+.flower {
+	animation: flower-rotation 7s 0s infinite alternate ease-in-out forwards;
+	transform-origin: 35% 10%
+}
+
+@keyframes flower-petal-animation {
+         0%     { fill: #ff0000; }
+     8.333%     { fill: #ff8000; }
+    16.667%     { fill: #ffff00; }
+    25.000%     { fill: #80ff00; }
+    33.333%     { fill: #00ff00; }
+    41.667%     { fill: #00ff80; }
+    50.000%     { fill: #00ffff; }
+    58.333%     { fill: #0080ff; }
+    66.667%     { fill: #0000ff; }
+    75.000%     { fill: #8000ff; }
+    83.333%     { fill: #ff00ff; }
+    91.667%     { fill: #ff0080; }
+    100.00%     { fill: #ff0000; }
+}
+
+@keyframes flower-rotation {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	100% {
+		transform: rotate(360deg) scale(1.5);
+	}
+}
