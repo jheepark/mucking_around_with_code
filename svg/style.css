@@ -33,3 +33,40 @@
 		transform: rotate(360deg) scale(1.5);
 	}
 }
+
+.drop-petal {
+	fill: yellow;
+	/* animation: swing ease-in-out 1s infinite alternate; */
+	animation: drop-petal-animation 7s ease-in-out forwards;
+	transform-origin: 35% 18%;
+}
+
+.flowerPetals1 > path {
+	stroke: black;
+	stroke-width: 2px;
+}
+
+@keyframes drop-petal-animation {
+    10%	{ transform: translateY(40px) rotate(20deg); }
+    25%	{ transform: translateY(70px) rotate(-8deg); }
+    40%	{ transform: translateY(100px) rotate(20deg); }
+    55%	{ transform: translateY(150px) rotate(-8deg); }
+    70%	{ transform: translateY(220px) rotate(20deg); }
+		90%	{ transform: translateY(300px) rotate(-8deg); }
+		100% { transform: translateY(320px) rotate(0deg); }
+}
+
+@keyframes swing {
+    0% { transform: rotate(4deg); }
+    100% { transform: rotate(-4deg); }
+}
+
+.smile {
+	animation: unhappy 7s ease-in-out forwards;
+	transform-origin: 28.7% 13.8%;
+}
+
+@keyframes unhappy {
+	0% { transform: rotate(0deg);}
+	100% {transform: rotate(180deg);}
+}
