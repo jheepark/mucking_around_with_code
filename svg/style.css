@@ -37,7 +37,7 @@
 .drop-petal {
 	fill: yellow;
 	/* animation: swing ease-in-out 1s infinite alternate; */
-	animation: drop-petal-animation 7s ease-in-out forwards;
+	animation: drop-petal-animation 5s ease-in-out forwards;
 	transform-origin: 35% 18%;
 }
 
@@ -61,12 +61,29 @@
     100% { transform: rotate(-4deg); }
 }
 
-.smile {
-	animation: unhappy 7s ease-in-out forwards;
+.frown {
+	transform: rotate(180deg);
+	stroke-dasharray: 27;
+	stroke-dashoffset: -27;
+	animation: unhappy 1s 1.4s forwards;
 	transform-origin: 28.7% 13.8%;
 }
 
 @keyframes unhappy {
-	0% { transform: rotate(0deg);}
-	100% {transform: rotate(180deg);}
+	to {
+		stroke-dashoffset: -52;
+	}
+}
+
+.smile {
+	stroke-dasharray: 52;
+	stroke-dashoffset: 0;
+	animation: happy 2s forwards;
+	transform-origin: 28.7% 13.8%;
+}
+
+@keyframes happy {
+	to {
+		stroke-dashoffset: -27;
+	}
 }
