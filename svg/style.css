@@ -37,7 +37,7 @@
 .drop-petal {
 	fill: yellow;
 	/* animation: swing ease-in-out 1s infinite alternate; */
-	animation: drop-petal-animation 5s ease-in-out forwards;
+	animation: drop-petal-animation 4s ease-in-out forwards;
 	transform-origin: 35% 18%;
 }
 
@@ -78,7 +78,7 @@
 .smile {
 	stroke-dasharray: 52;
 	stroke-dashoffset: 0;
-	animation: happy 2s forwards;
+	animation: happy 2s 0.2s forwards;
 	transform-origin: 28.7% 13.8%;
 }
 
