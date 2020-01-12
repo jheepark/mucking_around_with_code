@@ -1,0 +1,53 @@
+@keyframes rotate_in_out_cw {
+   0% { transform: rotate(0deg) }
+   50% { transform: rotate(45deg) }
+   100% { transform: rotate(0deg) }
+}
+@keyframes rotate_in_out_ccw {
+   0% { transform: rotate(0deg) }
+   50% { transform: rotate(-45deg) }
+   100% { transform: rotate(0deg) }
+}
+
+@keyframes draw_in_out {
+    0% {stroke-dashoffset: 0%;}
+   25% { stroke-dashoffset: 100%; }
+   50% { stroke-dashoffset: 0%; }
+  75% { stroke-dashoffset: 100%; }
+  100% { stroke-dashoffset: 0%; }
+}
+
+svg {
+	stroke-width: 20px;
+	stroke: black;
+	height: 100%;
+	left: 0px;
+	overflow: visible;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	stroke-dasharray: 0%;
+	stroke-dashoffset: 0%;
+	stroke-linecap: round;
+	stroke-miterlimit: 10;
+}
+
+.svg-2 {
+  transform-origin: center;
+  animation: rotate_in_out_cw 2s forwards;
+}
+
+.line-2 {
+  stroke-dasharray: 100%;
+  animation: draw_in_out 2s both;
+}
+
+.line-4 {
+  stroke-dasharray: 100%;
+  animation: draw_in_out 2s both;
+}
+
+.line-3 {
+  transform-origin: center;
+  animation: rotate_in_out_ccw 2s both;
+}
